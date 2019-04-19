@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ListingsController@index')->name('dashboard');
 
 Auth::routes();
 Route::resource('listings', 'ListingsController');
